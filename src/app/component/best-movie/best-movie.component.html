@@ -1,0 +1,29 @@
+<div class="body">
+
+    <div class="container">
+        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <button type="submit">View My Top 3 Movies</button>
+        </form>
+
+        <div class="movieBlock" *ngFor="let movie of movies">
+            <p><img  class="images" src={{movie.Poster}}/></p>
+            <div class="block">
+                <b>Description:</b>
+                <p>{{movie.Description}}</p>
+            </div>
+            <div class="block">
+                <b>directors:</b>
+                <p>{{movie.Director}}</p>
+            </div>
+            <div class="block">
+                <b>writers:</b>
+                <p>{{movie.Writer}}</p>
+            </div>
+            <div class="block">
+                <b>Stars:</b>
+                <p>{{movie.Actors}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

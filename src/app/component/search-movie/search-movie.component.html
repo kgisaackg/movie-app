@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Search a movie" formControlName="myMovie"><br />
+        <button type="submit">Search</button>
+    </form>
+
+   <p>{{movie.error}}</p>
+
+    <div>
+        <p><img  class="images" src={{movie.artwork}}/></p>
+        <div class="block">
+            <b>Description:</b>
+            <p>{{movie.description}}</p>
+        </div>
+        <div class="block">
+            <b>directors:</b>
+            <p>{{movie.directors}}</p>
+        </div>
+        <div class="block">
+            <b>writers:</b>
+            <p>{{movie.writers}}</p>
+        </div>
+        <div class="block">
+            <b>Stars:</b>
+            <p> {{movie.stars}}</p>
+        </div>
+    </div>
+</div>
